@@ -21,13 +21,14 @@ create table if not exists permissao (
 	primary key (id)
 );
 
+/* Criado pelo ManyToMany
 create table if not exists usuario_permissao (
 	usuario_id bigint not null,
 	permissao_id varchar(50) not null,
 	primary key (usuario_id, permissao_id),
 	constraint fk_usuariopermissao_usuario foreign key (usuario_id) references usuario(id),
 	constraint fk_usuariopermissao_permissao foreign key (permissao_id) references permissao(id)
-);
+);*/
 
 create table if not exists grupo (
 	id bigint not null auto_increment,

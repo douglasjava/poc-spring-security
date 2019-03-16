@@ -18,6 +18,8 @@ import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import com.algaworks.gp.model.Usuario;
+
 @Configuration
 @EnableAutoConfiguration
 public class DataBaseConfig {
@@ -30,23 +32,23 @@ public class DataBaseConfig {
 	public DataSource dataSource() {
 		return DataSourceBuilder.create().build();
 	}
-	
+
 	@Bean
 	public EntityManagerFactory entityManagerFactory() {
-		
+
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		vendorAdapter.setDatabase(Database.H2);
 		vendorAdapter.setGenerateDdl(false);
-		
+
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(dataSource());
 		em.setJpaVendorAdapter(vendorAdapter);
-		em.setPackagesToScan(packagesToScan);
+		em.setPackagesToScan(Usuario.class.getPackage().getName());
 		em.setJpaProperties(additionalProperties());
 		em.afterPropertiesSet();
-		
+
 		return em.getObject();
-		
+
 	}
 
 	private Properties additionalProperties() {

@@ -68,6 +68,13 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -75,7 +82,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>				
+			</plugin>
 		</plugins>
 	</build>
 
