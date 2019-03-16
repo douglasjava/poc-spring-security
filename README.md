@@ -1,8 +1,7 @@
-## Palestra para o Congresso de TI
+## Projeto Spring Security
 
-Este é o código fonte usado na palestra para o Contresso de TI.
 
-### Funcionalidades implementadas na palestra
+### Funcionalidades implementadas
 
 1. Login com HTTP Basic
 2. Login com página HTML gerada pelo Spring Security
@@ -16,10 +15,24 @@ Este é o código fonte usado na palestra para o Contresso de TI.
 10. Exibindo o nome do usuário na página html
 11. Configurando o "remember-me"
 
-## Como rodar o projeto
+#### Configurations
 
-```shell
-$ ./mvnw clean package spring-boot:run
-```
+Open file `application.properties` file contains informations for conections.
 
-O único pré-requisito é ter o JDK instalado.
+#### Requirements
+
+- Java 8
+- Maven > 3.0
+- Spring 2.0.3.RELEASE `pom.xml`
+
+#### From terminal
+
+Go on the project's root folder, then type:
+
+    $ mvn spring-boot:run
+
+#### From Eclipse (Spring Tool Suite)
+
+Import as *Existing Maven Project* and run it as *Spring Boot App*.
+
+### Usage
