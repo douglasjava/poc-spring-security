@@ -44,7 +44,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 		return viewResolver;
 	}
 
-	@Bean
+	
 	public ISpringTemplateEngine templateEngine() {
 		SpringTemplateEngine engine = new SpringTemplateEngine();
 		engine.setEnableSpringELCompiler(true);

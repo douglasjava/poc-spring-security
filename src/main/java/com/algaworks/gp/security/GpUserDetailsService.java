@@ -1,7 +1,5 @@
 package com.algaworks.gp.security;
 
-import static com.algaworks.gp.utils.JdbcUtils.*;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,10 +38,10 @@ public class GpUserDetailsService implements UserDetailsService {
 			GpUserDetails userDetails = buscarUsuario(connection, login);
 
 			Collection<GrantedAuthority> permissoesPorUsuario = buscarPermissoes(connection,
-					login, PERMISSOES_POR_USUARIO);
+					login, "");
 
 			Collection<GrantedAuthority> permissoesPorGrupo = buscarPermissoes(connection,
-					login, PERMISSOES_POR_GRUPO);
+					login, "");
 
 			userDetails.getAuthorities().addAll(permissoesPorUsuario);
 			userDetails.getAuthorities().addAll(permissoesPorGrupo);
@@ -65,7 +63,7 @@ public class GpUserDetailsService implements UserDetailsService {
 	}
 
 	public GpUserDetails buscarUsuario(Connection connection, String login) throws SQLException {
-		PreparedStatement ps = connection.prepareStatement(USUARIO_POR_LOGIN);
+		PreparedStatement ps = connection.prepareStatement("");
 		ps.setString(1, login);
 
 		ResultSet rs = ps.executeQuery();

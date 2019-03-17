@@ -16,30 +16,3 @@ insert into usuario_permissao (usuario_id, permissao_id) values
 	, (2, 1)
 	, (2, 2)
 ;
-
-
-
-
-
-
-
-
-
-
---insert into grupo (id, nome) values 
---	(1, 'DIRETOR') 
---	, (2, 'GERENTE')
---;
-	
---insert into usuario_grupo (usuario_id, grupo_id) values 
---	(1, 1)
---	, (2, 2)
---;
-	
---insert into grupo_permissao (grupo_id, permissao_id) values 
---	(1, 1)
---	, (1, 2)
---	, (1, 3)
---	, (2, 1)
---	, (2, 2)
---;
