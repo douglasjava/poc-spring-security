@@ -1,4 +1,4 @@
-package com.algaworks.gp.config;
+package com.algaworks.gp.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
